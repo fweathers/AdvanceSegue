@@ -12,6 +12,8 @@ let globalVariable = "Felicia"
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var activeRow = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,8 +24,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 4
     }
     
-   
-    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
@@ -31,6 +31,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = "Row \(indexPath.row)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        activeRow = indexPath.row
+        
+        performSegue(withIdentifier: "toSecondViewController", sender: nil)
+        
     }
     
 
