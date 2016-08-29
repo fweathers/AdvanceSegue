@@ -12,6 +12,8 @@ let globalVariable = "Felicia"
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var activeRow = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,6 +39,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         performSegue(withIdentifier: "toSecondViewController", sender: nil)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "toSecondViewController" {
+            
+            let secondViewController = segue.destination as! SecondViewController
+            
+            secondViewController.activeRow = activeRow
+        }
     }
     
 
