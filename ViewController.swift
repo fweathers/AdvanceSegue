@@ -11,8 +11,6 @@ import UIKit
 let globalVariable = "Felicia"
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    var activeRow = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

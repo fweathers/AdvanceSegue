@@ -9,6 +9,9 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    var activeRow = 0
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
