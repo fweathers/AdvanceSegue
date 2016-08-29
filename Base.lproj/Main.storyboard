@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Jump to Second View Controller"/>
                                 <connections>
-                                    <segue destination="IqJ-6Z-9Fv" kind="show" id="eN3-Pm-nTp"/>
+                                    <segue destination="IqJ-6Z-9Fv" kind="show" identifier="toSecondViewController" id="eN3-Pm-nTp"/>
                                 </connections>
                             </button>
                         </subviews>
